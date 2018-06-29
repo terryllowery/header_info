@@ -3,7 +3,10 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.send(req.headers);
+
+  var header = req;
+  console.log(header);
+  res.render('useragent', {header_info: header});
 });
 
 module.exports = router;
